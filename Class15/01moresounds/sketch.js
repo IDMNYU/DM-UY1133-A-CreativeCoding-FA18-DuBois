@@ -1,5 +1,6 @@
 
-var synth = new Tone.Synth().toMaster()
+// this is the main Tone synthesizer:
+var synth = new Tone.Synth().toMaster();
 
 function setup() {
   // put setup code here
@@ -14,5 +15,6 @@ function draw() {
 }
 
 function keyTyped() {
-  synth.triggerAttackRelease('C4', '8n')
+  //synth.triggerAttackRelease('C4', '8n'); // plays a note (musical values)
+  synth.triggerAttackRelease(150, 0.1); // plays a note (mathematical values)
 }
